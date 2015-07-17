@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>onAir</title>
+	<link rel="stylesheet" type="text/css" href="style/normalize.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="style/main.css" media="screen" />
+	<script src="script/jquery.js"></script>
+	<script src="script/jquery.mousewheel.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="title">UpdateMonitor</div>
+		<div class="cover">
+			<div class="updateToday">今日更新<span>08/27</span>
+			</div>
+			<div class="cards">
+				<div class="cards-container">
+					<div class="card" style="background:url(image/sao.jpg);">
+						<div class="cardTitle">
+							<div style="float: left">刀剑神域Ⅱ幽灵子弹</div>
+							<div>第16话, 澄空x华盟</div>
+							<a href="http://bt.ktxp.com/down/1414317510/e3fd2b0ddb570563e600f0a2f87de5ab3067290f.torrent">
+								<div class="download">下载</div>
+							</a>
+						</div>
+					</div>
+					<div class="card" style="background:url(image/xz.jpg);">
+						<div class="cardTitle">
+							<div style="float: left">追寻遗失的未来</div>
+							<div>第04话, 澄空学园</div>
+							<a href="http://bt.ktxp.com/down/1414315314/016fd34e04a9a8e9bd3be8f9af0aef5942621cbd.torrent">
+								<div class="download">下载</div>
+							</a>
+						</div>
+					</div>
+					<div class="card" style="background:url(image/bx.jpg);">
+						<div class="cardTitle">
+							<div style="float: left">白箱·SHIROBAKO</div>
+							<div>第03话, 华盟字幕社</div>
+							<a href="http://bt.ktxp.com/down/1414267911/bd33f09e6f1b4c756e4241cb393271be9e8dc6f6.torrent">
+								<div class="download">下载</div>
+							</a>
+						</div>
+					</div>
+					<div class="card" style="background:url(image/gc.jpg);">
+						<div class="cardTitle">
+							<div style="float: left">甘城光辉游乐园</div>
+							<div>第04话, 澄空x华盟</div>
+							<a href="http://bt.ktxp.com/down/1414165681/f7bb9ee0ea2020c1b2a40879884dcbbb39fb06f5.torrent">
+								<div class="download">下载</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="scroll">
+				<div class="scroll-body"></div>
+			</div>
+		</div>
+		<div class="character"></div>
+	</div>
+	<script type="text/javascript">
+		(function ($) {
+			$(document).ready(function () {
+				$('.scroll-body').css({
+					height: (462 * (462 / $('.cards-container').height())) + 'px'
+				});
+				var scrollTop = 462 - $('.cards-container').height() + 24;
+				var scrollBar = $('.scroll').height() - $('.scroll-body').height();
+				var scrollStep = scrollBar / ($('.card').length - 3);
+				$('.container').on('mousewheel', function (event) {
+					if (event.deltaY < 0) {
+						event.deltaY = -1;
+						if ($('.cards-container').position().top + event.deltaY * 100 <= scrollTop) return;
+						$('.cards-container').css({
+							top: ($('.cards-container').position().top + event.deltaY * 162) + 'px'
+						});
+						$('.scroll-body').css({
+							top: $('.scroll-body').position().top + scrollStep * -event.deltaY + 'px'
+						});
+					} else {
+						event.deltaY = 1;
+						if ($('.cards-container').position().top + event.deltaY * 100 >= 0) return;
+						$('.cards-container').css({
+							top: ($('.cards-container').position().top + event.deltaY * 162) + 'px'
+						});
+						$('.scroll-body').css({
+							top: $('.scroll-body').position().top + scrollStep * -event.deltaY + 'px'
+						});
+					}
+				});
+				$('.card').on('mouseenter', function () {
+					$('.cardTitle', this).stop();
+					$('.cardTitle', this).animate({
+						top: '66px'
+					});
+				});
+				$('.card').on('mouseleave', function () {
+					$('.cardTitle', this).stop();
+					$('.cardTitle', this).animate({
+						top: '110px'
+					});
+				});
+			});
+		})(jQuery);
+	</script>
+</body>
+
+</html>

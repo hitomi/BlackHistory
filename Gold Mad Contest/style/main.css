@@ -1,0 +1,111 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
+a:link {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  height: 720px;
+  width: 100%;
+  background: url(../image/background.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 50%;
+  margin-top: -360px;
+}
+
+.cards-container {
+  height: 480px;
+  width: 72%;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  margin-top: -240px;
+  padding-left: 240px;
+  overflow: hidden;
+}
+
+.cards {
+  white-space: nowrap;
+}
+
+.gc-logo {
+  height: 276px;
+  width: 166px;
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  margin-top: -138px;
+  background: url(../image/logo.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.day {
+  height: 480px;
+  width: 64px;
+  background: #fff;
+  margin-left: 24px;
+  display: inline-block;
+}
+
+.card {
+  height: 480px;
+  width: 100px;
+  background-repeat: no-repeat;
+  margin-left: 24px;
+  display: inline-block;
+  -webkit-transition: width .5s;
+  transition: width .5s;
+}
+
+.card:hover {
+  width: 640px;
+}
+
+.title {
+  height: 100%;
+  width: 28px;
+  position: relative;
+  left: 72px;
+  background: rgba(0, 0, 0, .8);
+  line-height: 18px;
+  text-align: center;
+  font-size: 16px;
+  padding: 4px 0;
+  color: #fff;
+  white-space: normal;
+  -webkit-transition: left .5s;
+  transition: left .5s;
+}
+
+.card:hover .title {
+  left: 612px;
+}
+
+.title span {
+  line-height: 16px;
+  font-size: 15px;
+  color: #ccc;
+}

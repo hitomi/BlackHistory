@@ -1,0 +1,11 @@
+<div class="fp-cover" ng-show="core.showDlg">
+	<div class="dlg-modal">
+			<h1>{{core.dlgTitle}}</h1>
+			<div>
+				{{core.dlgMsg}}
+			</div>
+			<br>
+		<a class="dlg-modal-confirm" href="#" ng-click="core.dlgIt()" ng-show="core.dlgSuccess">确认</a>
+		<a class="dlg-modal-cancel" href="#" ng-click="core.dlgIt()" ng-show="!core.dlgSuccess">返回</a>
+	</div>
+</div>
