@@ -1,2 +1,2 @@
 # 内详
-![Shenmegui](Design/Shenmegui.png)
+![Shenmegui](Shenmegui.png)
