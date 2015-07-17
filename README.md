@@ -2,6 +2,8 @@
 黑历史…嗯，还是合集……
 
 ## ACGAir
+[戳这里预览](https://hitomi.github.io/BlackHistory/ACGAir/index.html)
+
 原本打算和小华一起搞的一个找动画的网站，不过因为极影跪了所以…嗯……
 
 大概是我用AngularJS写的第一个东西……
@@ -14,11 +16,15 @@
 里面有详情
 
 ## Gold Mad Contest
+[戳这里预览](https://hitomi.github.io/BlackHistory/ACGAir/index.html)
+
 坑…做完了隔壁组说不用这边弄网站了……
 
 不过也就花了不到一晚上的时间就完事了不值一提……
 
 ## Have Fun Together
+[戳这里预览](https://hitomi.github.io/BlackHistory/Have Fun Together/index.html)
+
 14年寒假去实训时做的东西，实训项目是C语言+CGI写一个网站……
 
 不过我自己展开的有点过分了……
@@ -30,21 +36,25 @@
 当时觉得AngularJS真是好用啧啧，虽然现在也没用太明白…
 
 ## OnAir
-高三时挂的追番的东西，因为极影跪了所以也废了……
+[戳这里预览](https://hitomi.github.io/BlackHistory/OnAir/index.html)
 
-哦…在手机上用DroidEdit敲的……
-
-不过提这个又有什么意义呢……
+追番的东西，因为极影跪了所以也废了……
 
 ## Project Ruri - v1
+[戳这里预览](https://hitomi.github.io/BlackHistory/Project Ruri - v1/index.html)
+
 琉璃梦坊第一个版本，废
 
 并不是一个好的设计……
 
 ## SADP - About Us
+[戳这里预览](https://hitomi.github.io/BlackHistory/SADP - AboutUs/index.html)
+
 响应式的，另外接触到了定位的新天地XD
 
 ## SADP - New Action
+[戳这里预览](https://hitomi.github.io/BlackHistory/SADP - New Action/index.html)
+
 没啥…就是之前写的在线弹幕的一个应用……
 
 后端搞丢了……
