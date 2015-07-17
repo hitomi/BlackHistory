@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<title>逝梦 - Smile ACG Dream Project -</title>
+	<link rel="stylesheet" href="./style/normalize.css" media="screen" />
+	<link rel="stylesheet" href="./style/jquery.remodal.css" media="screen" />
+	<link rel="stylesheet" href="./style/main.css" media="screen" />
+	<script src="./script/jquery.js"></script>
+	<script src="./script/jquery.remodal.js"></script>
+</head>
+
+<body>
+	<div class="sadp">逝梦 - Smile ACG Dream Project -</div>
+	<a href="#modal">
+		<div class="container"></div>
+	</a>
+	<div class="remodal" data-remodal-id="modal">
+		<h1>留下邮箱</h1>
+		<div>
+			<input type="text" placeholder="surprise@smileacg.cc">
+		</div>
+		<br>
+		<a class="remodal-cancel" href="#">Cancel</a>
+		<a class="remodal-confirm" href="#">OK</a>
+	</div>
+	<script src="./script/socket.io.js"></script>
+	<script src="./script/danmakuuhaku.js"></script>
+	<script>
+		var inst = $('[data-remodal-id=modal]').remodal();
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,556 @@
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+body {
+  background: #eee;
+}
+
+.clean {
+  clear: both;
+}
+
+* {
+  outline: none;
+}
+
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 720px;
+  background-color: #000;
+  background-image: url(../images/background.jpg);
+  background-position: 50% 50%;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  margin: 24px;
+}
+
+.header h1 {
+  margin: 0;
+  padding-top: 260px;
+  font-size: 72px;
+  color: #fff;
+  text-align: center;
+}
+
+.header h3 {
+  font-size: 36px;
+  color: #fff;
+  text-align: center;
+}
+
+.lbtn.discover {
+  padding: 18px 100px;
+  font-size: 20px;
+  color: #fff;
+  border: 2px #fff solid;
+}
+
+.loginreg {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  margin: 24px;
+}
+
+.loginreg img {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+}
+
+.loginreg span {
+  margin-left: 8px;
+  color: #fff;
+}
+
+.loginreg a {
+  margin-right: 14px;
+  font-weight: bold;
+}
+
+.reg .form-group {
+  margin-top: 18px;
+}
+
+.reg input,
+.login input {
+  height: 40px;
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+.header a,
+.header a:link,
+.header a:visited,
+.header a:hover,
+.header a:active {
+  color: #fff;
+}
+
+.contain {
+  width: 1000px;
+  margin: 24px auto;
+}
+
+.con.left {
+  float: left;
+  width: 700px;
+}
+
+.con.right {
+  float: right;
+  width: 280px;
+  margin-left: 20px;
+}
+
+.fp-cover {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  -webkit-transition: .3s linear all;
+  transition: .3s linear all;
+  z-index: 20;
+}
+
+.fp-cover.ng-hide-add {
+  opacity: 1;
+}
+
+.fp-cover.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+}
+
+.fp-cover.ng-hide-remove {
+  opacity: 0;
+}
+
+.fp-cover.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+}
+
+.dlg-modal {
+  margin: 200px auto;
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.dlg-modal h1 {
+  margin-bottom: 14px;
+}
+
+.dlg-modal-confirm,
+.dlg-modal-cancel {
+  font-size: 10pt;
+  display: inline-block;
+  width: 120px;
+  margin: 0 0 5px 0;
+  padding: 9px 0;
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  background-clip: padding-box;
+}
+
+.dlg-modal-confirm {
+  color: #16a085;
+  border: 2px solid #16a085;
+  background: #f4f4f4;
+}
+
+.dlg-modal-confirm:hover,
+.dlg-modal-confirm:active {
+  color: #f4f4f4;
+  background: #16a085;
+}
+
+.dlg-modal-cancel {
+  color: #c0392b;
+  border: 2px solid #c0392b;
+  background: #f4f4f4;
+}
+
+.dlg-modal-cancel:hover,
+.dlg-modal-cancel:active {
+  color: #f4f4f4;
+  background: #c0392b;
+}
+
+.dlg-close {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  line-height: 20px;
+  font-size: 20px;
+  top: -6px;
+  left: -6px;
+  color: #aaa;
+  border: 2px #aaa solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.post a {
+  text-decoration: none;
+  color: #0063b9;
+}
+
+.post {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 20px;
+  padding-top: 0px;
+  background: #fff;
+  border: 1px #aaa solid;
+  -webkit-transition: opacity .5s;
+  transition: opacity .5s;
+  opacity: .6;
+}
+
+.post:hover {
+  opacity: 1.0;
+}
+
+.info {
+  position: relative;
+  height: 64px;
+  padding: 12px;
+  padding-left: 46px;
+  border-bottom: 1px dashed #aaa;
+}
+
+.post img.head {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  left: 0px;
+  position: absolute;
+  -webkit-transition: border-radius .5s;
+  transition: border-radius .5s;
+  cursor: pointer;
+}
+
+.post:hover img.head {
+  border-radius: 10%;
+}
+
+.card-title {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card-title span {
+  font-weight: bold;
+  color: #ff8900;
+  margin-right: 4px;
+}
+
+.content {
+  padding: 12px 4px;
+}
+
+.sign {
+  font-size: 13px;
+  color: #555;
+}
+
+.sign a {
+  font-size: 13px;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 24px;
+  padding: 72px 0;
+  color: #aaa;
+  text-align: center;
+  background: #fff;
+  border-top: 1px #a8a8b7 solid;
+}
+
+.footer .dot {
+  color: #000;
+}
+
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
+  color: #0084B4;
+}
+
+.search {
+  background: #fff;
+  border: 1px #aaa solid;
+  margin-bottom: 8px;
+  padding: 8px;
+  position: relative;
+}
+
+.search input {
+  height: 30px;
+  padding: 4px;
+  width: 262px;
+  font-size: 14px;
+  border: none;
+}
+
+.chat {
+  background: #fff;
+  border: 1px #aaa solid;
+}
+
+#chatmsg {
+  resize: none;
+  width: 100%;
+  padding: 12px;
+  font-size: 13px;
+  border: none;
+}
+
+.chatmgs {
+  width: 100%;
+  padding: 12px;
+  background: #eee;
+  border-bottom: 1px #aaa dashed;
+  overflow: hidden;
+}
+
+.m {
+  border: 1px #aaa solid;
+  margin: 8px 0;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 5px;
+  background: #fff;
+  position: relative;
+  width: 220px;
+  left: 36px;
+  word-wrap: break-word;
+}
+
+.m:before {
+  content: '123';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -10px;
+  top: 7px;
+  border: 5px solid transparent;
+  border-right: 5px solid #fff;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+}
+
+.m:after {
+  content: '123';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -12px;
+  top: 6px;
+  border: 6px solid transparent;
+  border-right: 6px solid #aaa;
+  font-size: 0;
+  line-height: 0;
+}
+
+.m.r {
+  left: 0;
+}
+
+.m.r:before {
+  content: '123';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 218px;
+  top: 7px;
+  border: 5px solid transparent;
+  border-left: 5px solid #fff;
+  font-size: 0;
+  line-height: 0;
+  z-index: 5;
+}
+
+.m.r:after {
+  content: '123';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 218px;
+  top: 6px;
+  border: 6px solid transparent;
+  border-left: 6px solid #aaa;
+  font-size: 0;
+  line-height: 0;
+}
+
+.chatt {
+  padding: 8px;
+  border-bottom: 1px #aaa dashed;
+}
+
+.chatsend {
+  position: relative;
+}
+
+.mhead {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  top: 0px;
+  left: -36px;
+  border-radius: 5px;
+  border: 1px #aaa solid;
+}
+
+.r .mhead {
+  left: 228px;
+}
+
+.m:hover {
+  box-shadow: 0 0 5px #ccc;
+}
+
+.m:hover .mhead {
+  box-shadow: 0 0 5px #ccc;
+}
+
+.bsend {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 4px 16px;
+  border: 1px #aaa solid;
+  background: #fff;
+}
+
+.search-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: url(../images/search.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  opacity: .5;
+  z-index: 5;
+}
+
+.ipt {
+  opacity: .4;
+}
+
+.postAct {
+  color: #fff;
+  padding: 8px;
+  position: relative;
+  text-align: center;
+  height: 48px;
+  line-height: 32px;
+  cursor: pointer;
+  background-image: -webkit-radial-gradient(circle, #2196F3 80%, #0D87E9 81%);
+  background-image: radial-gradient(circle, #2196F3 80%, #0D87E9 81%);
+  background-repeat: no-repeat;
+  background-size: 200% auto;
+  background-position: 50% center;
+  -webkit-transition: background-size .5s;
+  transition: background-size .5s;
+}
+
+.postAct span {
+  margin-right: 8px;
+}
+
+.postAct:hover {
+  background-size: 100%;
+}
+
+.postAct:active {
+  background-color: #0d87e9;
+  background-image: -webkit-radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
+  background-image: radial-gradient(circle, #0d87e9 10%, #2196f3 11%);
+  background-repeat: no-repeat;
+  background-size: 1000%;
+}
+
+.edit {
+  opacity: 1;
+  overflow: hidden;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.edit.ng-hide-add {
+  opacity: 1;
+  margin-bottom: 0;
+}
+
+.edit.ng-hide-add.ng-hide-add-active {
+  opacity: 0;
+  margin-bottom: -350px;
+}
+
+.edit.ng-hide-remove {
+  opacity: 0;
+  margin-bottom: -350px;
+}
+
+.edit.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1;
+  margin-bottom: 0;
+}
+
+.edit input {
+  width: 85%;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px #aaa solid;
+}
+
+.edit button span {
+  color: #fff;
+}
+
+#postcontent {
+  width: 100%;
+  resize: vertical;
+  padding: 8px;
+}
+
+.psend {
+  float: right;
+  padding: 4px 16px;
+  margin-left: 4px;
+}
+
+.dlg-modal .form-control-feedback {
+  top: 3px;
+  right: 12px;
+}

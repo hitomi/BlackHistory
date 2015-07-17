@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="HFT">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>发现活动 - 聚友趣</title>
+	<link rel="stylesheet" href="./assets/stylesheets/normalize.css" media="screen" />
+	<link rel="stylesheet" href="./assets/stylesheets/bootstrap.css" media="screen" />
+	<link rel="stylesheet" href="./assets/stylesheets/animate.min.css" media="screen" />
+	<link rel="stylesheet" href="./assets/stylesheets/lcss.css" media="screen" />
+	<link rel="stylesheet" href="./assets/stylesheets/main.css" media="screen" />
+</head>
+
+<body ng-controller="HFTCore as core">
+	<div class="header">
+		<a href="#" class="logo">
+			<!--<img src="./assets/images/logo.png" alt="聚友趣">-->
+		</a>
+		<div class="loginreg">
+			<div ng-show="!core.user.login"><a href="#" ng-click="core.loginDlg()">登陆</a><a href="#" ng-click="core.regDlg()">注册</a></div>
+			<div ng-show="core.user.login"><img ng-src="{{core.user.head}}"><span>@{{core.user.name}}</span></div>
+		</div>
+		<h1>派对，旅行，研究，讲座</h1>
+		<h3>一起来制造乐趣</h3>
+        <div class="ltac lmt72">
+            <a href="#"><span class="lbtn discover">发现活动</span></a>
+        </div>
+	</div>
+	<div class="contain" id="discover">
+		<div class="con left">
+			<article class="post" style="padding:20px;text-align:center;" ng-show="!core.prepost.edit && core.havePosts()">还没有相关的活动，发布一个？</article>
+			<form role="form" name="postform" ng-submit="core.doSendPost(postform.$valid)" novalidate>
+				<article class="post edit" ng-show="core.prepost.edit">
+					<div class="info">
+						<img class="head" ng-src="{{core.user.head}}">
+						<div class="card-title">
+							<span class="btn-group">
+								<button type="button" class="btn btn-warning dropdown-toggle btn-xs" data-toggle="dropdown">
+									{{core.prepost.type}} <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="#" ng-click="core.prepost.type = '线下'">线下</a>
+									</li>
+									<li><a href="#" ng-click="core.prepost.type = '线上'">线上</a>
+									</li>
+								</ul>
+							</span>
+							<input type="text" ng-model="pretitle" name="postTitle" required >
+						</div>
+						<div class="sign"><a href="#">@{{core.user.name}}</a> 正在编辑中……</div>
+					</div>
+					<div class="content"><textarea name="postcontent" id="postcontent" rows="10" ng-model="precontent" name="postArticle" required ></textarea></div>
+					<button class="btn btn-primary psend" type="submit" style="font-size: 12px;" ng-disabled="postform.$invalid">发送</button>
+					<button class="btn btn-default psend" type="reset" style="font-size: 12px;">清空</button>
+					<div class="clean"></div>
+				</article>
+			</form>
+			<article class="post" ng-repeat="post in core.posts | search : keywords">
+				<div class="info">
+					<img class="head" ng-src="{{post.head}}">
+					<div class="card-title"><span>[{{post.type}}]</span>{{post.title}}</div>
+					<div class="sign"><a href="#">@{{post.author}}</a> 发布于 {{post.datetime}}</div>
+				</div>
+				<div class="content">{{post.content}}</div>
+			</article>
+		</div>
+		<div class="con right">
+			<div class="search">
+				<div class="postAct" ng-click="core.postAct()"><span class="glyphicon glyphicon-pencil"></span>发起活动</div>
+			</div>
+			<div class="search">
+				<div class="search-btn" ng-click="core.searchKeyword()"></div>
+				<input type="text" placeholder="找找感兴趣的活动…" ng-model="keywords">
+			</div>
+			<div class="chat">
+				<div class="chatt">交流</div>
+				<div class="chatmgs">
+					<div class="m" ng-repeat="m in core.chatMsg | hoffset: core.chatMsg.length | limitTo: 10" ng-class-even="'r'"><img ng-src="{{m.head}}" class="mhead">{{m.msg}}</div>
+					<div class="m ipt" ng-show="mchat"><img src="./assets/images/head/01.png" class="mhead">{{mchat}}</div>
+				</div>
+				<div class="chatsend">
+					<form role="form" name="msgform" ng-submit="core.doSendMsg(msgform.$valid)" novalidate>
+						<textarea name="chatmsg" id="chatmsg" rows="4" placeholder="说点什么吧…" ng-model="mchat" required ></textarea>
+						<button class="btn btn-default bsend" style="font-size: 12px;" ng-disabled="msgform.$invalid">发送</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="clean"></div>
+	</div>
+	<div class="footer">
+		一起来制造乐趣
+	</div>
+	<div class="fp-cover" ng-show="core.showLogin">
+		<div class="dlg-modal login" data-remodal-id="login">
+			<form id="loginform" role="form" name="loginform" ng-submit="core.doLogin(loginform.$valid)" novalidate>
+				<h1>登录</h1>
+				<div>
+					<div class="form-group has-feedback" ng-class="{'has-warning': !loginform.username.$dirty && !core.ableLogin.un}">
+						<input type="text" class="form-control" name="username" id="lusername" placeholder="用户名" ng-model="loginUsername" required >
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback" ng-show="!loginform.username.$dirty && !core.ableLogin.un"></span>
+					</div>
+					<div class="form-group has-feedback" ng-class="{'has-warning': !loginform.password.$dirty && !core.ableLogin.un}">
+						<input type="password" class="form-control" name="password" id="lpassword" placeholder="密码" ng-model="loginPassword" required >
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback" ng-show="!loginform.password.$dirty && !core.ableLogin.pw"></span>
+					</div>
+				</div>
+				<br>
+				<a class="dlg-modal-cancel" href="#" ng-click="core.loginDlg()">返回</a>
+				<button class="dlg-modal-confirm" href="#" type="submit">提交</button>
+			</form>
+		</div>
+	</div>
+	<div class="fp-cover" ng-show="core.showRegister">
+		<div class="dlg-modal reg">
+			<form id="regform" role="form" name="regform" ng-submit="core.doRegister(regform.$valid)" novalidate>
+				<h1>注册</h1>
+				<div>
+					<div class="form-group has-feedback" ng-class="{'has-warning': !regform.username.$dirty && !core.ableReg.un}">
+						<input type="text" class="form-control" name="username" id="rusername" placeholder="用户名" ng-model="registerUsername" required >
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback" ng-show="!regform.username.$dirty && !core.ableReg.un"></span>
+					</div>
+					<div class="form-group has-feedback" ng-class="{'has-warning': !regform.password.$dirty && !core.ableReg.pw}">
+						<input type="password" class="form-control" name="password" id="rpassword" placeholder="密码" ng-model="registerPassword" required >
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback" ng-show="!regform.password.$dirty && !core.ableReg.pw"></span>
+					</div>
+					<div class="form-group has-feedback" ng-class="{'has-warning': !regform.rpassword.$dirty && !core.ableReg.rp}">
+						<input type="password" class="form-control" id="rrpassword" placeholder="确认密码" ng-model="registerRPassword" required >
+						<span class="glyphicon glyphicon-warning-sign form-control-feedback" ng-show="!regform.rpassword.$dirty && !core.ableReg.rp"></span>
+					</div>
+				</div>
+				<br>
+				<a class="dlg-modal-cancel" href="#" ng-click="core.regDlg()">返回</a>
+				<button class="dlg-modal-confirm" href="#" type="submit">提交</a>
+			</form>
+		</div>
+	</div>
+	<div ng-include="'./dlg.template.html'"></div>
+	<script src="./app/libs/arrayext.js"></script>
+	<script src="./app/libs/jquery.js"></script>
+	<script src="./app/libs/bootstrap.min.js"></script>
+	<script src="./app/libs/angular.js"></script>
+	<script src="./app/libs/angular-animate.js"></script>
+	<script src="./app/controller.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+body {
+    width: 100%;
+    height: 100%;
+    /*设定背景色*/
+    background-color: #000;
+}
+
+.container {
+    /*设置块的宽高*/
+    width: 1280px;
+    height: 720px;
+    /*设置背景图，相对于css所在位置的路径*/
+    background: url(../image/background.jpg);
+    /*绝对定位*/
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -360px 0 0 -640px;
+    /*越界隐藏*/
+    overflow: hidden;
+}
+
+.title {
+    /*宽高*/
+    width: 100%;
+    height: 68px;
+    /*背景色，RGBA格式的，A代表alpha：透明度，RGB就是颜色值了*/
+    background-color: rgba(255, 127, 0, 0.3);
+    /*padding: 内边距*/
+    padding-left: 12px;
+    /*文字的颜色，没啥好说的*/
+    color: #FFF;
+    /*字体大小*/
+    font-size: 32px;
+    /*行高，针对于文字，设置成和高度一样的话可以用来让文字垂直居中*/
+    line-height: 68px;
+}
+
+.cover {
+    /*宽高*/
+    width: 823px;
+    height: 652px;
+    /*背景图*/
+    background: url(../image/cover.png);
+    /*背景重复：重复Y轴，就是竖着的循环，这样的话我只要把cover的高度砍成1px平铺就行了，能节约体积*/
+    background-repeat: repeat-y;
+    /*把card挤下去*/
+    padding-top: 60px;
+}
+
+.character {
+    width: 600px;
+    height: 750px;
+    background: url(../image/character.png);
+
+    position: absolute;
+    top: 15px;
+    left: 666px;
+}
+
+.updateToday {
+    height: 26px;
+
+    color: #FFF;
+    font-size: 18px;
+    line-height: 26px;
+
+    position: absolute;
+    left: 38px;
+    top: 94px;
+}
+
+.updateToday span {
+    /*透明度，整个块的透明度，下面所有的元素都会受到影响*/
+    opacity: 0.5;
+
+    font-size: 14px;
+    padding-left: 4px;
+}
+
+.cards {
+	width: 518px;
+	height: 462px;
+	
+	position: absolute;
+	left: 60px;
+	top: 152px;
+	
+	overflow: hidden;
+}
+
+.card {
+    width: 518px;
+    height: 138px;
+
+    margin-bottom: 24px;
+
+    overflow: hidden;
+}
+
+.cardTitle {
+    width: 100%;
+    height: 72px;
+    background: rgba(0, 0, 0, 0.8);
+
+    position: relative;
+    top: 110px;
+
+    color: #FFF;
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 6px;
+}
+
+.cardTitle div{
+    height: 28px;
+
+    float: right;
+
+    color: #FFF;
+    font-size: 16px;
+    line-height: 28px;
+    padding-right: 12px;
+}
+
+.cards-container {
+	position: absolute;
+}
+
+.scroll {
+	height: 462px;
+	width: 12px;
+	
+	position: absolute;
+	left: 584px;
+	top: 152px;
+	
+	background: #fff;
+	opacity: .6;
+	
+	border-radius: 6px;
+}
+
+.scroll-body {
+	height: 462px;
+	width: 12px;
+	
+	position: absolute;
+	
+	background: #000;
+	
+	border-radius: 6px;
+}
+
+.download {
+	float: none;
+	border: 2px #fff solid;
+	position: absolute;
+	line-height: 26px;
+	top: 32px;
+	height: 26px;
+	width: 490px;
+	text-align: center;
+}
+
+.download:hover {
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+}

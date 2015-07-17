@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>単語手帳</title>
+  <link rel="stylesheet" href="assets/normalize.css">
+  <link rel="stylesheet" href="assets/all.css">
+</head>
+<body id="TanngoTetyou">
+  <div class="logo">
+    単語手帳
+  </div>
+  <div class="search-box">
+    <input type="text" placeholder="検索" v-model="searchText" v-on="keyup:addTanngo(searchText) | key enter">
+    <div
+      class="add"
+      v-show="addMode(searchText)">
+      添加新单词
+      <div class="preview" v-html="searchText | preview">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <ul>
+      <li
+        class="tanngos"
+        v-repeat="tanngos | searchWord searchText"
+        >
+        <div class="title">
+          {{ $key | indexInJp }}
+        </div>
+        <ul class="list">
+          <li
+           v-repeat="$value">
+            <div
+              class="jp"
+              v-html="jp">
+            </div>
+            <div class="ch">
+              {{ch}}
+            </div>
+         </li>
+        </ul>
+        <div class="clear"></div>
+      </li>
+    </ul>
+  </div>
+  <script src="lib/jquery.js"></script>
+  <script src="lib/lodash.js"></script>
+  <script src="lib/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="ACGAir">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<title>onAir</title>
+	<link rel="stylesheet" href="style/normalize.css" media="screen" />
+	<link rel="stylesheet" href="style/main.css" media="screen" />
+</head>
+
+<body ng-controller="ACGAirCore as core">
+	<div class="header-cover" ng-style="core.pagecover.cover">
+		<div class="overlay-black-5">
+			<div class="title-overlay">
+				<div class="title-logo"></div>
+				<div class="cover-recommend">今日封面推荐
+					<a href="#">
+						<div class="dl" ng-bind="core.pagecover.name">加载中…</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="c-cardlist">
+			<div class="card" ng-repeat="anime in core.animes">
+				<div class="cover" ng-style="anime.cover"></div>
+				<div class="title">
+					<span class="type">{{anime.type}}</span>{{anime.name}}
+					<div class="dl" ng-click="anime.showdl=!anime.showdl">
+						下载<span class="caret" ng-class="{toup: anime.showdl}"></span>
+					</div>
+				</div>
+				<div class="dlist" ng-show="anime.showdl">
+					这里是下载列表
+				</div>
+				<div class="info producer">{{anime.producer}}</div>
+				<div class="info actors">{{anime.actors}}</div>
+				<ul class="tags">
+					<li ng-repeat="tag in anime.tags" ng-click="core.tabAdder(tag)" ng-show="$index<8||anime.showtags">{{tag}}</li>
+					<li ng-if="anime.tags.length>7" ng-click="anime.showtags=!anime.showtags">{{anime.showtags? '收起' : '展开'}}<span class="caret" ng-class="{toup: anime.showtags}"></span>
+					</li>
+					<div class="clear"></div>
+				</ul>
+			</div>
+		</div>
+		<div class="c-nav">
+			<div class="search-box" ng-controller="ACGAirTagSearch as ts">
+				<div class="title">
+					动画检索
+					<div class="nimue"></div>
+				</div>
+				<div class="keyword">
+					<input type="text" class="search-input" placeholder="输入关键字直接检索">
+					<div class="search-send"></div>
+				</div>
+				<div class="keyword-box">
+					当前标签
+					<div style="text-align:center;" ng-show="!(core.selectTabs.length)">暂无</div>
+					<ul class="tags">
+						<li ng-repeat="tag in core.selectTabs" ng-click="core.tabClick(tag)">{{tag}}<span class="close">×</span>
+						</li>
+					</ul>
+					<div class="clear"></div>
+				</div>
+				<div class="keyword-select">
+					<div class="group" ng-repeat="taggroup in core.taggroups">
+						{{taggroup.type}}
+						<ul class="tags">
+							<li ng-repeat="tag in taggroup.tags" ng-class="{active : core.selectTabs.in_array(tag)}" ng-click="core.tabClick(tag)" ng-show="$index<4||taggroup.showtags">{{tag}}</li>
+							<li ng-if="taggroup.tags.length>4" ng-click="taggroup.showtags=!taggroup.showtags">{{taggroup.showtags? '收起' : '展开'}}<span class="caret" ng-class="{toup: taggroup.showtags}"></span>
+							</li>
+						</ul>
+						<div class="clear"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		漫空 ACGAir
+		<span class="dot">·</span>
+		<a href="#">关于我们</a>
+		<span class="dot">·</span>
+		<a href="#">版权声明</a>
+		<span class="dot">·</span>
+		<a href="#">BUG追踪</a>
+		<span class="dot">·</span>
+		<a href="#">列表定制</a>
+		<span class="dot">·</span>
+		致我们深爱的二次元
+	</div>
+	<script src="./app/libs/arrayext.js"></script>
+	<script src="./app/libs/jquery.js"></script>
+	<script src="./app/libs/angular.js"></script>
+	<script src="./app/controller.js"></script>
+</body>
+
+</html>

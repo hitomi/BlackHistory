@@ -1,0 +1,285 @@
+/*全局*/
+
+body {
+	background: #eee;
+}
+/*框架*/
+
+.container {
+	width: 1140px;
+	margin: 64px auto;
+}
+.c-cardlist {
+	float: left;
+	width: 820px;
+}
+.c-nav {
+	float: right;
+	width: 320px;
+}
+/*通用*/
+
+.clear {
+	clear: both;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+	color: #fff;
+	text-decoration: none;
+}
+.caret {
+	display: inline-block;
+	width: 0;
+	height: 0;
+	margin-left: 4px;
+	vertical-align: middle;
+	border-top: 4px solid;
+	border-right: 4px solid transparent;
+	border-left: 4px solid transparent;
+}
+.caret.toup {
+	border-bottom: 4px solid;
+	border-top: none;
+}
+/*标签*/
+
+.tags {
+	padding: 0;
+	margin: 0;
+}
+.tags li {
+	float: left;
+	width: 80px;
+	height: 16px;
+	padding: 4px;
+	margin-top: 8px;
+	margin-right: 8px;
+	font-size: 14px;
+	text-align: center;
+	white-space: nowrap;
+	line-height: 16px;
+	background: #fff;
+	border: 1px #a8a8b7 solid;
+	border-radius: 3px;
+	list-style: none;
+	cursor: pointer;
+}
+.tags li:hover {
+	background: #eee;
+}
+.tags li.active {
+	color: #444;
+	background: #dbdbea;
+}
+.tags li .close {
+	float: right;
+	color: #a8a8b7;
+	font-size: 12px;
+}
+/*封推*/
+
+.header-cover {
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background-color: #000;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.overlay-black-5 {
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .5);
+}
+.header-cover .title-overlay {
+	width: 500px;
+	height: 100%;
+	background: url(../image/public/alpha-cover.png);
+	background-repeat: repeat-y;
+}
+.header-cover .title-logo {
+	position: absolute;
+	left: 36px;
+	top: 36px;
+	width: 188px;
+	height: 60px;
+	background: url(../image/public/aa-logo.png);
+}
+.header-cover .cover-recommend {
+	position: absolute;
+	bottom: 24px;
+	left: 36px;
+	color: #fff;
+	font-size: 13px;
+}
+.header-cover .cover-recommend .dl {
+	padding: 16px;
+	margin-top: 8px;
+	font-size: 16px;
+	border: 2px #fff solid;
+}
+/*页脚*/
+
+.footer {
+	width: 100%;
+	margin-top: 24px;
+	padding: 72px 0;
+	color: #aaa;
+	text-align: center;
+	background: #fff;
+	border-top: 1px #a8a8b7 solid;
+}
+.footer .dot {
+	color: #000;
+}
+.footer a:link,
+.footer a:visited,
+.footer a:hover,
+.footer a:active {
+	color: #0084B4;
+}
+/*资料卡*/
+
+.card {
+	position: relative;
+	width: 490px;
+	min-height: 144px;
+	padding: 18px;
+	padding-left: 292px;
+	margin-bottom: 16px;
+	background: #fff;
+	border: 1px #a8a8b7 solid;
+}
+.card .dl {
+	float: right;
+	cursor: pointer;
+}
+.card .dlist {
+	margin: 6px 0;
+	padding: 6px;
+	border-top: 1px #a8a8b7 dashed;
+	border-bottom: 1px #a8a8b7 dashed;
+}
+.card .info {
+	font-size: 14px;
+	white-space: nowrap;
+	line-height: 20px;
+}
+.card .cover {
+	position: absolute;
+	left: 18px;
+	top: 18px;
+	width: 256px;
+	height: 144px;
+	background-color: #000;
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.card .title {
+	font-size: 18px;
+}
+.card .type {
+	position: relative;
+	top: -2px;
+	padding: 3px 8px;
+	margin-right: 6px;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	line-height: 14px;
+	background: #2693ff;
+	border-radius: 3px;
+}
+.card .producer {
+	color: #a8a8b7;
+}
+.card .tags {
+	margin-top: 8px;
+	border-top: 1px #a8a8b7 dashed;
+}
+/*搜索*/
+
+.search-box {
+	position: relative;
+	width: 320px;
+	background: #fff;
+	border: 1px #a8a8b7 solid;
+}
+.search-box .title {
+	position: relative;
+	height: 18px;
+	width: 284px;
+	padding: 16px;
+	line-height: 18px;
+	font-size: 16px;
+	border-bottom: 1px #a8a8b7 dashed;
+}
+.search-box .nimue {
+	position: absolute;
+	top: -184px;
+	right: -10px;
+	width: 288px;
+	height: 234px;
+	background: url(../image/public/nimue.png);
+	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.search-box .keyword {
+	position: relative;
+	width: 320px;
+	height: 68px;
+	background: #f5f5f5;
+	border-bottom: 1px #a8a8b7 dashed;
+}
+.search-box .search-input {
+	width: 244px;
+	height: 20px;
+	padding: 8px;
+	padding-right: 36px;
+	margin: 16px;
+	font-size: 14px;
+	line-height: 20px;
+	border: 1px #a8a8b7 solid;
+}
+.search-box .search-send {
+	position: absolute;
+	top: 17px;
+	right: 15px;
+	width: 36px;
+	height: 36px;
+	background: url(../image/public/ico-search.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	opacity: .5;
+}
+.search-box .search-send:hover {
+	opacity: 1.0;
+}
+.search-box .keyword-box {
+	position: relative;
+	width: 296px;
+	padding: 12px;
+	font-size: 14px;
+	background: #f5f5f5;
+	border-bottom: 1px #a8a8b7 dashed;
+}
+.search-box .tags {
+	position: relative;
+	left: 6px;
+}
+.search-box .keyword-select .group {
+	margin-bottom: 12px;
+	font-size: 14px;
+}
+.search-box .keyword-select {
+	position: relative;
+	width: 296px;
+	padding: 12px;
+	background: #f5f5f5;
+}
