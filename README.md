@@ -16,7 +16,7 @@
 里面有详情
 
 ## Gold Mad Contest
-[戳这里预览](https://hitomi.github.io/BlackHistory/ACGAir/index.html)
+[戳这里预览](https://hitomi.github.io/BlackHistory/Gold Mad Contest/index.html)
 
 坑…做完了隔壁组说不用这边弄网站了……
 
