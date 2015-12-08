@@ -13,7 +13,9 @@
 
 还有一些自己画的东西也放进去了XD
 
-里面有详情
+![NothingHere](Design/画画画/NothingHere.png)
+
+But, 里面有详情
 
 ## Gold Mad Contest
 [戳这里预览](https://hitomi.github.io/BlackHistory/Gold Mad Contest/index.html)
