@@ -18,14 +18,14 @@
 But, 里面有详情
 
 ## Gold Mad Contest
-[戳这里预览](https://hitomi.github.io/BlackHistory/Gold Mad Contest/index.html)
+[戳这里预览](https://hitomi.github.io/BlackHistory/Gold%20dMad%20dContest/index.html)
 
 坑…做完了隔壁组说不用这边弄网站了……
 
 不过也就花了不到一晚上的时间就完事了不值一提……
 
 ## Have Fun Together
-[戳这里预览](https://hitomi.github.io/BlackHistory/Have Fun Together/index.html)
+[戳这里预览](https://hitomi.github.io/BlackHistory/Have%20dFun%20dTogether/index.html)
 
 14年寒假去实训时做的东西，实训项目是C语言+CGI写一个网站……
 
@@ -43,19 +43,19 @@ But, 里面有详情
 追番的东西，因为极影跪了所以也废了……
 
 ## Project Ruri - v1
-[戳这里预览](https://hitomi.github.io/BlackHistory/Project Ruri - v1/index.html)
+[戳这里预览](https://hitomi.github.io/BlackHistory/Project%20dRuri%20d-%20dv1/index.html)
 
 琉璃梦坊第一个版本，废
 
 并不是一个好的设计……
 
 ## SADP - About Us
-[戳这里预览](https://hitomi.github.io/BlackHistory/SADP - AboutUs/index.html)
+[戳这里预览](https://hitomi.github.io/BlackHistory/SADP%20d-%20dAboutUs/index.html)
 
 响应式的，另外接触到了定位的新天地XD
 
 ## SADP - New Action
-[戳这里预览](https://hitomi.github.io/BlackHistory/SADP - New Action/index.html)
+[戳这里预览](https://hitomi.github.io/BlackHistory/SADP%20d-%20dNew%20dAction/index.html)
 
 没啥…就是之前写的在线弹幕的一个应用……
 
